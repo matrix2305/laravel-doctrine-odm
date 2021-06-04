@@ -1,0 +1,42 @@
+{
+    "name": "matrix98/laravel_doctrine_odm",
+    "description": "Doctrine ODM wrapper for Laravel",
+    "type": "library",
+    "keywords": ["Doctrine", "ODM", "Laravel", "MongoDB", "Mongo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "matrix98",
+            "email": "srki.rado@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LaravelDoctrineODM\\" : "./src"
+        },
+        "files": [
+        ]
+    },
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "require": {
+        "php": "^7.4|^8.0",
+        "doctrine/mongodb-odm": "^2.2.1",
+        "ext-mongodb": "*"
+    },
+    "require-dev": {
+        "phpmetrics/phpmetrics": "^2.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelDoctrineODM\\ServiceProviders\\DocumentManagerServiceProvider",
+                "LaravelDoctrineODM\\ServiceProviders\\IdeHelperServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

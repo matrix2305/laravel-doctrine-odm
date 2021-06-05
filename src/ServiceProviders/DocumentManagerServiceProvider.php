@@ -41,6 +41,8 @@ class DocumentManagerServiceProvider extends ServiceProvider
 
             return DocumentManager::create($client, $dmConfig);
         });
-        $this->app->bind(ObjectManager::class, DocumentManager::class);
+        $this->app->bind(ObjectManager::class, function (){
+            return $this->app->make('DocumentManager');
+        });
     }
 }

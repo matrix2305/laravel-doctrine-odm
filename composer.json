@@ -23,7 +23,8 @@
     "require": {
         "php": "^7.4|^8.0",
         "doctrine/mongodb-odm": "^2.2.1",
-        "ext-mongodb": "*"
+        "ext-mongodb": "*",
+        "doctrine/mongodb-odm-softdelete": "dev-master"
     },
     "require-dev": {
         "phpmetrics/phpmetrics": "^2.4"

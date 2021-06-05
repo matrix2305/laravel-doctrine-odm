@@ -2,14 +2,13 @@
 declare(strict_types=1);
 namespace LaravelDoctrineODM\Facades;
 
-
 use Illuminate\Support\Facades\Facade;
-use Doctrine\ODM\MongoDB\DocumentManager as DoctrineDocumentManager;
+use Doctrine\ODM\MongoDB\SoftDelete\SoftDeleteManager as DoctrineSoftDeleteManager;
 
-class DocumentManager extends Facade
+class SoftDeleteManager extends Facade
 {
     protected static function getFacadeAccessor() : string
     {
-        return 'DocumentManager';
+        return 'SoftDeleteManager';
     }
 }

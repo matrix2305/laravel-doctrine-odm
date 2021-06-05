@@ -45,12 +45,12 @@ php artisan vendor:publish --provider=LaravelDoctrineODM\ServiceProviders\IdeHel
 Example to get DocumentManager instance with dependency injection: 
 
 ``` php
-    use Doctrine\Persistence\ObjectManager;
+    use Doctrine\ODM\MongoDB\DocumentManager;
 
     class TestRepository {
-        protected ObjectManager $dm;
+        protected DocumentManager $dm;
     
-        public function __construct(ObjectManager $dm)
+        public function __construct(DocumentManager $dm)
         {
             $this->dm = $dm;
         }

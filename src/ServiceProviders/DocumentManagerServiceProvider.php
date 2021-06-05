@@ -9,6 +9,9 @@ use Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver;
 use Doctrine\Persistence\ObjectManager;
 use Illuminate\Support\ServiceProvider;
 use MongoDB\Client;
+use Doctrine\ODM\MongoDB\SoftDelete\UnitOfWork;
+use Doctrine\ODM\MongoDB\SoftDelete\SoftDeleteManager;
+use Doctrine\Common\EventManager;
 
 class DocumentManagerServiceProvider extends ServiceProvider
 {
@@ -41,8 +44,23 @@ class DocumentManagerServiceProvider extends ServiceProvider
 
             return DocumentManager::create($client, $dmConfig);
         });
-        $this->app->bind(ObjectManager::class, function (){
+        $this->app->singltone('SoftDeleteManager', function (){
+            $softDeleteConf = new \Doctrine\ODM\MongoDB\SoftDelete\Configuration();
+            $softDeleteConf->setDeletedFieldName(config('laravel_dm.soft_deletes.field_name'));
+            return new SoftDeleteManager($this->app->make(DocumentManager::class), $softDeleteConf, new EventManager());
+        });
+
+        $this->app->bind(DocumentManager::class, function (){
             return $this->app->make('DocumentManager');
         });
+
+        $this->app->bind(SoftDeleteManager::class, function (){
+            return $this->app->make('SoftDeleteManager');
+        });
+    }
+
+    public function provides() : array
+    {
+        return ['SoftDeleteManager', 'DocumentManager'];
     }
 }

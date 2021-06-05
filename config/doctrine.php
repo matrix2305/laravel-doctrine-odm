@@ -50,8 +50,7 @@ return [
 
         'soft_deletes' => [
             'enabled'    => true,
-            'field_name' => 'deleted_at'
+            'field_name' => 'deletedAt'
         ]
-
     ],
 ];

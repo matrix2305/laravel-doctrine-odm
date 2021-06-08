@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="791cf684-e86c-488c-8104-a753d71ded61" name="Default Changelist" comment="" />
+    <list default="true" id="791cf684-e86c-488c-8104-a753d71ded61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Traits/Auth/Authenticatable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Traits/Auth/Notifiable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/SoftDeletableEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/SoftDeletableEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/TimestampableEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/TimestampableEntity.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -34,10 +40,23 @@
       <option name="presentableId" value="Default" />
       <updated>1622852503525</updated>
       <workItem from="1622852504675" duration="1742000" />
+      <workItem from="1622925524879" duration="599000" />
+      <workItem from="1622974844857" duration="6000" />
+      <workItem from="1623152104096" duration="2622000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl" timestamp="1622974849658">
+      <screen x="0" y="31" width="1920" height="1021" />
+    </state>
+    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl/0.31.1920.1021/1920.0.1920.1200@0.31.1920.1021" timestamp="1622974849658" />
+    <state x="663" y="271" width="585" height="538" key="NewPhpClassDialog" timestamp="1623152632315">
+      <screen x="0" y="31" width="1920" height="1021" />
+    </state>
+    <state x="663" y="271" width="585" height="538" key="NewPhpClassDialog/0.31.1920.1021/1920.0.1920.1200@0.31.1920.1021" timestamp="1623152632315" />
   </component>
 </project>

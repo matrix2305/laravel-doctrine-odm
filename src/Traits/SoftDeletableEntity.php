@@ -10,7 +10,6 @@ trait SoftDeletableEntity
      * @ODM\Field(type="date")
      * @ODM\Index
      */
-
     private ?\DateTime $deletedAt;
 
     public function getDeletedAt(): ?\DateTime

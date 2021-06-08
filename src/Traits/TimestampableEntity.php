@@ -2,28 +2,39 @@
 declare(strict_types=1);
 namespace LaravelDoctrineODM\Traits;
 
-use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
+use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+
 
 trait TimestampableEntity
 {
     /**
-     * @var \DateTime
-     * @PHPCR\Field(type="date", property="jcr:created")
+     * @var ?\DateTime
+     * @ODM\Field(type="date", nullable=true)
      */
-    private \DateTime $created;
+    private ?\DateTime $createdAt;
 
     /**
      * @var \DateTime
-     * @PHPCR\Field(type="date", property="jcr:lastModified")
+     * @ODM\Field(type="date")
      */
-    private \DateTime $lastModified;
+    private \DateTime $updatedAt;
+
+    public function __call($method, $args) : void
+    {
+        if (str_contains(strtolower($method), 'set')){
+            if ($this->createdAt === null){
+                $this->createdAt = new \DateTime();
+            }
+            $this->updatedAt = new \DateTime();
+        }
+    }
 
     /**
      * @return \DateTime
      */
     public function getCreatedAt(): \DateTime
     {
-        return $this->created;
+        return $this->createdAt;
     }
 
     /**
@@ -31,6 +42,6 @@ trait TimestampableEntity
      */
     public function getUpdatedAt(): \DateTime
     {
-        return $this->lastModified;
+        return $this->updatedAt;
     }
 }

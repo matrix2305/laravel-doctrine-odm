@@ -7,12 +7,12 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 trait Authenticatable
 {
     /**
-     * @ORM\Field(type="string")
+     * @ODM\Field(type="string")
      */
     protected string $password;
 
     /**
-     * @ORM\Field (type="string", nullable=true)
+     * @ODM\Field (type="string", nullable=true)
      */
     protected ?string $rememberToken;
 

@@ -52,7 +52,7 @@ class DoctrineUserProvider implements UserProvider
      *
      * @return Authenticatable|null
      */
-    public function retrieveByToken($identifier, string $token) : ?Authenticatable
+    public function retrieveByToken($identifier, $token) : ?Authenticatable
     {
         return $this->getRepository()->findOneBy([
             $this->getEntity()->getAuthIdentifierName() => $identifier,
@@ -69,7 +69,7 @@ class DoctrineUserProvider implements UserProvider
      *
      * @return void
      */
-    public function updateRememberToken(Authenticatable $user, string $token) : void
+    public function updateRememberToken(Authenticatable $user, $token) : void
     {
         $user->setRememberToken($token);
         $this->dm->persist($user);

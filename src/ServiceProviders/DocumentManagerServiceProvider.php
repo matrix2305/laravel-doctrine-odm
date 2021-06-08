@@ -17,7 +17,7 @@ class DocumentManagerServiceProvider extends ServiceProvider
 {
     public function boot() : void
     {
-
+        $this->extendAuthManager();
     }
 
     public function register() : void
@@ -50,17 +50,29 @@ class DocumentManagerServiceProvider extends ServiceProvider
             return new SoftDeleteManager($this->app->make(DocumentManager::class), $softDeleteConf, new EventManager());
         });
 
-        $this->app->bind(DocumentManager::class, function (){
-            return $this->app->make('DocumentManager');
-        });
-
-        $this->app->bind(SoftDeleteManager::class, function (){
-            return $this->app->make('SoftDeleteManager');
-        });
+        $this->app->alias('DocumentManager', DocumentManager::class);
+        $this->app->alias('SoftDeleteManager', SoftDeleteManager::class);
     }
 
     public function provides() : array
     {
         return ['SoftDeleteManager', 'DocumentManager'];
+    }
+
+    protected function extendAuthManager() : void
+    {
+        if ($this->app->bound('auth')) {
+            $this->app->make('auth')->provider('doctrine', function ($app, $config) {
+                $entity = $config['model'];
+
+                $dm = $this->app->make(DocumentManager::class);
+
+                return new DoctrineUserProvider(
+                    $app['hash'],
+                    $dm,
+                    $entity
+                );
+            });
+        }
     }
 }

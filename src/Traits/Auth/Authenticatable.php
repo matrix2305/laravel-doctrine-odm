@@ -77,7 +77,7 @@ trait Authenticatable
      *
      * @return void
      */
-    public function setRememberToken(string $value) : void
+    public function setRememberToken($value) : void
     {
         $this->rememberToken = $value;
     }

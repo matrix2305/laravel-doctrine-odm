@@ -17,7 +17,6 @@
         "files": [
         ]
     },
-    "version": "1.4.0",
     "minimum-stability": "dev",
     "prefer-stable" : true,
     "require": {

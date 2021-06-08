@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791cf684-e86c-488c-8104-a753d71ded61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Auth/DoctrineUserProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServiceProviders/DocumentManagerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceProviders/DocumentManagerServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../infogram-movies/moj-off" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -40,7 +38,7 @@
       <workItem from="1622852504675" duration="1742000" />
       <workItem from="1622925524879" duration="599000" />
       <workItem from="1622974844857" duration="6000" />
-      <workItem from="1623152104096" duration="4373000" />
+      <workItem from="1623152104096" duration="5969000" />
     </task>
     <servers />
   </component>
@@ -48,10 +46,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl" timestamp="1622974849658">
+    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl" timestamp="1623158572530">
       <screen x="0" y="31" width="1920" height="1021" />
     </state>
-    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl/0.31.1920.1021/1920.0.1920.1200@0.31.1920.1021" timestamp="1622974849658" />
+    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl/0.31.1920.1021/1920.0.1920.1200@0.31.1920.1021" timestamp="1623158572530" />
     <state x="2583" y="282" width="585" height="538" key="NewPhpClassDialog" timestamp="1623155728559">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>

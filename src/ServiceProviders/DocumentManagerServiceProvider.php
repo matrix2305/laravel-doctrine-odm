@@ -12,6 +12,7 @@ use MongoDB\Client;
 use Doctrine\ODM\MongoDB\SoftDelete\UnitOfWork;
 use Doctrine\ODM\MongoDB\SoftDelete\SoftDeleteManager;
 use Doctrine\Common\EventManager;
+use LaravelDoctrineODM\Auth\DoctrineUserProvider;
 
 class DocumentManagerServiceProvider extends ServiceProvider
 {

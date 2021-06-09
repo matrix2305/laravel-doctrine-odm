@@ -29,10 +29,10 @@ class DoctrineODMSchemaUpdate extends Command
 
         try {
             if (is_string($class)){
-                $this->processDocumentIndex($sm, $class, 10000, null);
+                $this->processDocumentIndex($sm, $class, 0, null);
                 $this->info("Successfully updated {$class} entity.");
             }else{
-                $this->processIndex($sm, 10000, null);
+                $this->processIndex($sm, 0, null);
                 $this->info('Successfully updated all entities.');
             }
         }catch (Exception $exception) {

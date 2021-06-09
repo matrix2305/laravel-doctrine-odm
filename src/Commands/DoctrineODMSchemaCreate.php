@@ -34,9 +34,9 @@ class DoctrineODMSchemaCreate extends Command
         foreach ($create as $option){
             try {
                 if (is_string($class)){
-                    $this->{'processDocument' . ucfirst($option)}($sm, $class, 1000, null, $background);
+                    $this->{'processDocument' . ucfirst($option)}($sm, $class, 10000, null, $background);
                 } else {
-                    $this->{'process' . ucfirst($option)}($sm, 1000, null, $background);
+                    $this->{'process' . ucfirst($option)}($sm, 10000, null, $background);
                 }
                 $this->info(sprintf(
                     'Created %s%s for %s',

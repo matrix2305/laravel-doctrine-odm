@@ -36,7 +36,7 @@ class DoctrineODMSchemaUpdate extends Command
                 $this->info('Successfully updated all entities.');
             }
         }catch (Exception $exception) {
-            $this->error('An error has occurred, not possible update entities');
+            $this->error($exception->getMessage());
         }
     }
 

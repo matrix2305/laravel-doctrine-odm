@@ -26,13 +26,19 @@ class DoctrineODMSchemaUpdate extends Command
             $class = null;
         }
         $sm = DocumentManager::getSchemaManager();
+        $maxTimeInMS = $this->ask('Insert maximum execution time in ms: ');
+        if (!is_numeric($maxTimeInMS)){
+            throw new \Exception('Max execution time must be number.');
+        }
+
+        $maxTimeInMS = (int)$maxTimeInMS;
 
         try {
             if (is_string($class)){
-                $this->processDocumentIndex($sm, $class, 0, null);
+                $this->processDocumentIndex($sm, $class, $maxTimeInMS, null);
                 $this->info("Successfully updated {$class} entity.");
             }else{
-                $this->processIndex($sm, 0, null);
+                $this->processIndex($sm, $maxTimeInMS, null);
                 $this->info('Successfully updated all entities.');
             }
         }catch (Exception $exception) {

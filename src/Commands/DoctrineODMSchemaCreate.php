@@ -29,14 +29,21 @@ class DoctrineODMSchemaCreate extends Command
         $class = $this->hasOption('class')? $this->option('class') : null;
         $background = $this->hasOption('background');
 
+        $maxTimeInMS = $this->ask('Insert maximum execution time in ms: ');
+        if (!is_numeric($maxTimeInMS)){
+            throw new \Exception('Max execution time must be number.');
+        }
+
+        $maxTimeInMS = (int)$maxTimeInMS;
+
         $sm = DocumentManager::getSchemaManager();
 
         foreach ($create as $option){
             try {
                 if (is_string($class)){
-                    $this->{'processDocument' . ucfirst($option)}($sm, $class, 0, null, $background);
+                    $this->{'processDocument' . ucfirst($option)}($sm, $class, $maxTimeInMS, null, $background);
                 } else {
-                    $this->{'process' . ucfirst($option)}($sm, 0, null, $background);
+                    $this->{'process' . ucfirst($option)}($sm, $maxTimeInMS, null, $background);
                 }
                 $this->info(sprintf(
                     'Created %s%s for %s',

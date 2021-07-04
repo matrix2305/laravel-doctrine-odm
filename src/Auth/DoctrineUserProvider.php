@@ -73,7 +73,7 @@ class DoctrineUserProvider implements UserProvider
     {
         $user->setRememberToken($token);
         $this->dm->persist($user);
-        $this->dm->flush($user);
+        $this->dm->flush();
     }
 
 

@@ -7,7 +7,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 trait SoftDeletableEntity
 {
     /**
-     * @ODM\Field(type="date")
+     * @ODM\Field(type="date", nulllable=true)
      * @ODM\Index
      */
     private ?\DateTime $deletedAt;

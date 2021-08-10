@@ -26,6 +26,7 @@ class DocumentManagerServiceProvider extends ServiceProvider
         $this->app->singleton('DocumentManager', function ($app) {
             $doctrineConfig = config('doctrine');
             $databaseConfig = config('database');
+            dd($doctrineConfig);
             $connectionConfig = $databaseConfig['connections'][$doctrineConfig['connection']];
             $dmConfig = new Configuration();
             $dmConfig->setProxyDir($doctrineConfig['doctrine_dm']['proxies']['path']);

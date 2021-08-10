@@ -23,8 +23,8 @@ class DocumentManagerServiceProvider extends ServiceProvider
 
     public function register() : void
     {
-        $this->app->singleton('DocumentManager', function () {
-            if ($this->app->runningInConsole()){
+        $this->app->singleton('DocumentManager', function ($app) {
+            if ($app->runningInConsole()){
                 $doctrineConfig = include(base_path().'/config/doctrine.php');
                 $databaseConfig = include(base_path().'/config/database.php');
             }else{

@@ -24,13 +24,8 @@ class DocumentManagerServiceProvider extends ServiceProvider
     public function register() : void
     {
         $this->app->singleton('DocumentManager', function ($app) {
-            if ($app->runningInConsole()){
-                $doctrineConfig = include(base_path().'/config/doctrine.php');
-                $databaseConfig = include(base_path().'/config/database.php');
-            }else{
-                $doctrineConfig = config('doctrine');
-                $databaseConfig = config('database');
-            }
+            $doctrineConfig = config('doctrine');
+            $databaseConfig = config('database');
             $connectionConfig = $databaseConfig['connections'][$doctrineConfig['connection']];
             $dmConfig = new Configuration();
             $dmConfig->setProxyDir($doctrineConfig['doctrine_dm']['proxies']['path']);

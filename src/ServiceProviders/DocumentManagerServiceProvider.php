@@ -50,10 +50,10 @@ class DocumentManagerServiceProvider extends ServiceProvider
 
             return DocumentManager::create($client, $dmConfig);
         });
-        $this->app->singleton('SoftDeleteManager', function (){
+        $this->app->singleton('SoftDeleteManager', function ($app){
             $softDeleteConf = new \Doctrine\ODM\MongoDB\SoftDelete\Configuration();
             $softDeleteConf->setDeletedFieldName(config('laravel_dm.soft_deletes.field_name'));
-            return new SoftDeleteManager($this->app->make(DocumentManager::class), $softDeleteConf, new EventManager());
+            return new SoftDeleteManager($app->make(DocumentManager::class), $softDeleteConf, new EventManager());
         });
 
         $this->app->alias('DocumentManager', DocumentManager::class);

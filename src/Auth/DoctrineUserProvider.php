@@ -8,6 +8,7 @@ use Illuminate\Contracts\Hashing\Hasher;
 use ReflectionClass;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Str;
+use ErrorException;
 
 class DoctrineUserProvider implements UserProvider
 {
@@ -41,7 +42,11 @@ class DoctrineUserProvider implements UserProvider
      */
     public function retrieveById($identifier)
     {
-        return $this->getRepository()->find($identifier);
+        try {
+            return $this->getRepository()->find($identifier);
+        }catch (ErrorException $exception){
+            return null;
+        }
     }
 
     /**

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="791cf684-e86c-488c-8104-a753d71ded61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Traits/SoftDeletableEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/SoftDeletableEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DoctrineOdm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DoctrineOdm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/doctrine.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/doctrine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/DoctrineODMSchemaUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/DoctrineODMSchemaUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Facades/DocumentManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facades/DocumentManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServiceProviders/DocumentManagerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceProviders/DocumentManagerServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServiceProviders/IdeHelperServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceProviders/IdeHelperServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -43,6 +52,8 @@
       <workItem from="1623168060552" duration="4923000" />
       <workItem from="1623230007052" duration="39000" />
       <workItem from="1623258483747" duration="1831000" />
+      <workItem from="1625394832285" duration="695000" />
+      <workItem from="1628596556145" duration="483000" />
     </task>
     <servers />
   </component>
@@ -50,9 +61,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl" timestamp="1623230044917">
+    <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl" timestamp="1625395653886">
       <screen x="0" y="31" width="1920" height="1021" />
     </state>
+    <state x="743" y="300" key="FileChooserDialogImpl/0.31.1920.1021/1920.0.1440.900@0.31.1920.1021" timestamp="1625395653886" />
     <state x="743" y="300" width="426" height="480" key="FileChooserDialogImpl/0.31.1920.1021/1920.0.1920.1200@0.31.1920.1021" timestamp="1623230044917" />
     <state x="2663" y="316" key="FileChooserDialogImpl/0.31.1920.1021/1920.0.1920.1200@1920.0.1920.1200" timestamp="1623164639694" />
     <state x="2583" y="282" width="585" height="538" key="NewPhpClassDialog" timestamp="1623155728559">
@@ -60,5 +72,9 @@
     </state>
     <state x="663" y="271" width="585" height="538" key="NewPhpClassDialog/0.31.1920.1021/1920.0.1920.1200@0.31.1920.1021" timestamp="1623152632315" />
     <state x="2583" y="282" key="NewPhpClassDialog/0.31.1920.1021/1920.0.1920.1200@1920.0.1920.1200" timestamp="1623155728559" />
+    <state x="555" y="278" width="802" height="524" key="Vcs.Push.Dialog.v2" timestamp="1625394903676">
+      <screen x="0" y="31" width="1920" height="1021" />
+    </state>
+    <state x="555" y="278" width="802" height="524" key="Vcs.Push.Dialog.v2/0.31.1920.1021/1920.0.1440.900@0.31.1920.1021" timestamp="1625394903676" />
   </component>
 </project>

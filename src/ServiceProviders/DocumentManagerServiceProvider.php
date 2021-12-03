@@ -37,12 +37,21 @@ class DocumentManagerServiceProvider extends ServiceProvider
             $dmConfig->setPersistentCollectionNamespace($doctrineConfig['doctrine_dm']['persistent-collections']['namespace']);
             $dmConfig->setDefaultDB($connectionConfig['database']);
 
-            $client = new Client($connectionConfig['dsn'], [
+            $params = [
                 'port' => $connectionConfig['port'],
-                'username' => $connectionConfig['username'],
-                'password' => $connectionConfig['password'],
                 'db' => $connectionConfig['database']
-            ], ['typeMap' => DocumentManager::CLIENT_TYPEMAP]);
+            ];
+
+            if (isset($connectionConfig['username'])){
+                $params['username'] = $connectionConfig['username'];
+            }
+
+            if (isset($connectionConfig['password'])){
+                $params['password'] = $connectionConfig['password'];
+            }
+
+
+            $client = new Client($connectionConfig['dsn'], $params, ['typeMap' => DocumentManager::CLIENT_TYPEMAP]);
 
             return DocumentManager::create($client, $dmConfig);
         });

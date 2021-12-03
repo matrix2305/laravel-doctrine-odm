@@ -49,7 +49,7 @@ class DocumentManagerServiceProvider extends ServiceProvider
 
             $dsn .= $connectionConfig['dsn'].":".$connectionConfig['port'];
 
-            $client = new Client($connectionConfig['dsn'], [
+            $client = new Client($dsn, [
                 'port' => $connectionConfig['port'],
                 'username' => $connectionConfig['username'],
                 'password' => $connectionConfig['password']

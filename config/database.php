@@ -45,7 +45,7 @@ return [
 
         'mongodb'   => [
             'driver'        => 'mongodb',
-            'dsn'           => env('DB_HOST'),
+            'dsn'           => 'mongodb://'.env('DB_HOST'),
             'database'      => env('DB_DATABASE'), // Default DB to perform queries against (not authenticate against)
             'retryConnect'  => 2, // Number of connection retry attempts before failing (doctrine feature)
             'retryQuery'    => 1, // Number of query retry attempts before failing (doctrine feature)
